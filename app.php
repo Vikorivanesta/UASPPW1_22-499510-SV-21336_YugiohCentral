@@ -38,7 +38,8 @@
     $sortBy = $_GET["sortBy"] ?? '';
     $sortDir = $_GET["sortDir"] ?? '';
 
-    $cardQuery = "SELECT DISTINCT card.card_id FROM card LEFT JOIN card_subcategory ON card.card_id = card_subcategory.card_id LEFT JOIN archetype_detail ON card.card_id = archetype_detail.card_id WHERE  name LIKE '%$filterText%'";
+    $cardQuery = "SELECT DISTINCT card.card_id FROM card LEFT JOIN card_subcategory ON card.card_id = card_subcategory.card_id LEFT JOIN archetype_detail ON card.card_id = archetype_detail.card_id";
+    $cardFilter = " WHERE  name LIKE '%$filterText%'";
 
     if ($sortBy != "") {
         if ($sortBy != "name"){
@@ -46,31 +47,31 @@
         }
     }
     if ($filterCategory != "") {
-        $cardQuery = $cardQuery . " AND category = " . "'" . $filterCategory . "'";
+        $cardFilter = $cardFilter . " AND category = " . "'" . $filterCategory . "'";
     }
     if ($filterSubcategory != "") {
-        $cardQuery = $cardQuery . " AND subcategory_id = " . $filterSubcategory;
+        $cardFilter = $cardFilter . " AND subcategory_id = " . $filterSubcategory;
     }
     if ($filterAttribute != "") {
-        $cardQuery = $cardQuery . " AND attribute = " . "'" . $filterAttribute . "'";
+        $cardFilter = $cardFilter . " AND attribute = " . "'" . $filterAttribute . "'";
     }
     if ($filterType != "") {
-        $cardQuery = $cardQuery . " AND type = " . "'" . $filterType . "'";
+        $cardFilter = $cardFilter . " AND type = " . "'" . $filterType . "'";
     }
     if ($filterArchetype != "") {
-        $cardQuery = $cardQuery . " AND archetype_id = " . $filterArchetype;
+        $cardFilter = $cardFilter . " AND archetype_id = " . $filterArchetype;
     }
     if ($filterRarity != "") {
-        $cardQuery = $cardQuery . " AND rarity = " . "'" . $filterRarity . "'";
+        $cardFilter = $cardFilter . " AND rarity = " . "'" . $filterRarity . "'";
     }
 
-    $cardQuery = $cardQuery . " AND atk >= " . $filterAtk;
-    $cardQuery = $cardQuery . " AND def >= " . $filterDef;
-    $cardQuery = $cardQuery . " AND lvl >= " . $filterLvl;
+    $cardFilter = $cardFilter . " AND atk >= " . $filterAtk;
+    $cardFilter = $cardFilter . " AND def >= " . $filterDef;
+    $cardFilter = $cardFilter . " AND lvl >= " . $filterLvl;
 
     if ($sortBy != "") {
-        $cardQuery = $cardQuery . " ORDER BY " . $sortBy;
-        $cardQuery = $cardQuery . " " . $sortDir;
+        $cardFilter = $cardFilter . " ORDER BY " . $sortBy;
+        $cardFilter = $cardFilter . " " . $sortDir;
     }
 
     $cards = mysqli_query($conn, $cardQuery);
