@@ -7,8 +7,9 @@ require_once __DIR__.'/router.php';
 // ##################################################
 
 // Static GET
-get('/', 'index.php');
-get('/cardDatabase', 'cardList.php');
+any('/', 'index.php');
+any('/cardDatabase', 'cardList.php');
+any('/Login', 'login.php');
 
 // Dynamic GET. Example with 1 variable
 // The $id will be available in user.php

@@ -7,8 +7,7 @@
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
     <title>Ygo Central</title>
-    <?php 
-        include 'app.php'; ?>
+    <?php include 'app.php'; ?>
 </head>
 <body>
     <!-- navbar -->
@@ -20,12 +19,13 @@
           </button>
           <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav ms-auto">
-              <a class="nav-link" href="">Home</a>
-              <a class="nav-link" href="cardDatabase">Card Database</a>
-              <a class="nav-link" href="#decks">Decks</a>
-              <a class="nav-link" href="#article">Articles</a>
-              <a class="nav-link" href="#secretPack">Secret Packs</a>
-              <a class="nav-link" href="#deckBuilder">Deck Builder</a>
+                <a class="nav-link" href="">Home</a>
+                <a class="nav-link" href="cardDatabase">Card Database</a>
+                <a class="nav-link" href="#decks">Decks</a>
+                <a class="nav-link" href="#article">Articles</a>
+                <a class="nav-link" href="#secretPack">Secret Packs</a>
+                <a class="nav-link" href="#deckBuilder">Deck Builder</a>
+                <a class="btn btn-danger" href="Login">Login</a>
             </div>
           </div>
         </div>
@@ -161,5 +161,6 @@
     </footer>
 
     <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="app.js"></script>
 </body>
 </html>
