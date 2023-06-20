@@ -17,6 +17,18 @@ Beberapa kebutuhan klien yang dapat dipenuhi melalui Yugioh Central meliputi:
 4. Artikel : Website ini menawarkan berbagai artikel seperti news, guide, event, tournament, dll.
 
 Melalui Yugioh Central, pemain _Yugioh: Master Duel_ dapat memperoleh akses ke resource yang lengkap dengan mudah dan cepat. Dengan demikian, website ini menjadi pusat informasi dan komunitas yang membantu pemain dalam menjelajahi dan menikmati permainan _Yugioh: Master Duel_.
+# Tampilan Web
+## Homepage
+![image](https://github.com/Vikorivanesta/UASPPW1_22-499510-SV-21336_YugiohCentral/assets/109974561/f60b7e05-5d64-421b-86c2-5c8fcb44afe1)
+![image](https://github.com/Vikorivanesta/UASPPW1_22-499510-SV-21336_YugiohCentral/assets/109974561/6a2c62a5-cb5d-4e25-b51b-815f1d9db54a)
+![image](https://github.com/Vikorivanesta/UASPPW1_22-499510-SV-21336_YugiohCentral/assets/109974561/d1796408-19e1-43f2-9140-91d280d15588)
+
+## Card Database
+Start Page:
+![image](https://github.com/Vikorivanesta/UASPPW1_22-499510-SV-21336_YugiohCentral/assets/109974561/c8224e75-6dba-45c8-a6c4-96340020ffdc)
+End page:
+![image](https://github.com/Vikorivanesta/UASPPW1_22-499510-SV-21336_YugiohCentral/assets/109974561/86033820-27c2-49b2-9ec9-2ed0850073df)
+
 # Kriteria Penilaian
 ## Prinsip Desain
 ### Color Palette
@@ -37,10 +49,6 @@ Melalui Yugioh Central, pemain _Yugioh: Master Duel_ dapat memperoleh akses ke r
 - Borderless
 - Rounded-4
 - On hover: transform(1.02), lighten up background (except card component)
-
-![image](https://github.com/Vikorivanesta/UASPPW1_22-499510-SV-21336_YugiohCentral/assets/109974561/f60b7e05-5d64-421b-86c2-5c8fcb44afe1)
-![image](https://github.com/Vikorivanesta/UASPPW1_22-499510-SV-21336_YugiohCentral/assets/109974561/6a2c62a5-cb5d-4e25-b51b-815f1d9db54a)
-
 
 
 ## Responsiveness
@@ -77,6 +85,11 @@ card:
 ```
 <a class='col-6 col-sm-4 col-md-3 col-lg-2 my-2 ygo-card' href='img/card/$card[card_id].webp'>
 ```
+![image](https://github.com/Vikorivanesta/UASPPW1_22-499510-SV-21336_YugiohCentral/assets/109974561/e8f99703-c4b4-483d-b1a6-62396e8e1744)
+![image](https://github.com/Vikorivanesta/UASPPW1_22-499510-SV-21336_YugiohCentral/assets/109974561/4131311b-3236-4837-9f68-0860a157fe0e)
+
+
+
 
 ## Direct Feedback
 Pada login page, website akan menampilkan alert-success jika username dan password ada di dalam database, dan menampilkan alert-warning jika tidak ditemukan.
