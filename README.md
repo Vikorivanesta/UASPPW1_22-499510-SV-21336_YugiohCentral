@@ -28,7 +28,56 @@ Melalui Yugioh Central, pemain _Yugioh: Master Duel_ dapat memperoleh akses ke r
 - Font family = sofia sans
 - Font size   = default bootstrap
 - Font shadow = black jika warna text menyatu dengan background
+### Spacing
+- Section ditaruh di dalam bootstrap container
+- margin m-5 antar section
+- margin m-3 atau m-2 antar komponen
+- padding p-2 atau p-3 sesuai konten
+### Clickable component
+- Borderless
+- Rounded-4
+- On hover: transform(1.02), lighten up background (except card component)
+
+![image](https://github.com/Vikorivanesta/UASPPW1_22-499510-SV-21336_YugiohCentral/assets/109974561/f60b7e05-5d64-421b-86c2-5c8fcb44afe1)
+![image](https://github.com/Vikorivanesta/UASPPW1_22-499510-SV-21336_YugiohCentral/assets/109974561/6a2c62a5-cb5d-4e25-b51b-815f1d9db54a)
+
+
+
 ## Responsiveness
+### Homepage
+- Pada navbar, navigation link akan collapse menjadi hamburger icon saat ukuran layar < 768px
+- pada main section, saat ukuran layar >= 768px akan terdiri dari 2 kolom dan berubah menjadi 1 kolom saat ukuran layar < 768px
+- pada main section, saat ukuran layar >= 768px akan menampilkan gambar dan akan hilang saat ukuran layar < 768px
+- Pada article section, saat ukuran layar >= 992px akan terdiri dari 2 kolvbar:om dan berubah menjadi 1 kolom saat ukuran layar < 992px
+
+navbar:
+```
+<nav class="navbar navbar-expand-md navbar-dark sticky-top shadow bg-dark">
+```
+main section column:
+```
+<div class="col-md-6">
+```
+main section's image:
+```
+<div class="col d-none d-md-block">
+```
+article:
+```
+<div class='col-lg-6'>
+```
+![image](https://github.com/Vikorivanesta/UASPPW1_22-499510-SV-21336_YugiohCentral/assets/109974561/88151618-fa45-4b58-93b2-55733636455e)
+
+### Card Database page
+- Pada navbar, navigation link akan collapse menjadi hamburger icon saat ukuran layar < 768px
+- Pada filter form, input akan di-wrap ke line baru jika layar mengecil
+- Pada card list, akan menampilkan 6 card per row jika ukuran layar >= 992px, menampilkan 4 card per row jika 768px <= ukuran layar < 992px, menampilkan 3 card per row jika 576px <= ukuran layar < 768px, dan menampilkan 2 card per row jika ukuran layar <576px
+
+card:
+```
+<a class='col-6 col-sm-4 col-md-3 col-lg-2 my-2 ygo-card' href='img/card/$card[card_id].webp'>
+```
+
 ## Direct Feedback
 Pada login page, website akan menampilkan alert-success jika username dan password ada di dalam database, dan menampilkan alert-warning jika tidak ditemukan.
 
@@ -71,8 +120,16 @@ Pada login page, website akan menampilkan alert-success jika username dan passwo
         }
     ?>
 ```
+
+failed login:
+![image](https://github.com/Vikorivanesta/UASPPW1_22-499510-SV-21336_YugiohCentral/assets/109974561/6a346170-d539-4b1a-889b-1c91aab39a5a)
+success login:
+![image](https://github.com/Vikorivanesta/UASPPW1_22-499510-SV-21336_YugiohCentral/assets/109974561/ba196de8-ae10-4881-b7c1-90ec6900f30c)
+
+
 ## Dynamic Content
-1. Pada homepage, section 'article' akan menampilkan 4 artikel terbaru yang diambil dari database
+### Homepage
+Pada homepage, section 'article' akan menampilkan 4 artikel terbaru yang diambil dari database
 
 ```
 //-----Fetch article-----
@@ -98,7 +155,8 @@ Pada login page, website akan menampilkan alert-success jika username dan passwo
                 }
             ?>
 ```
-2. Pada page 'Card Database' (cardList.php), akan menampilkan database kartu secara dinamis dengan fitur filtering.
+### Card Database Page
+Pada page 'Card Database' (cardList.php), akan menampilkan database kartu secara dinamis dengan fitur filtering.
 
 code untuk filtering:
 
