@@ -40,7 +40,7 @@
 
             foreach ($userslist as $web_user) {
                 if ($web_username == $web_user['username'] && $web_password == $web_user['password']) {
-                    // Authentication successful, redirect to dashboard
+                    // Authentication successful, alert-success
                     echo "<div class='container'>
                     <div class='alert alert-success alert-dismissible fade show top-10 start-50 translate-middle-x text-center' role='alert'>
                         Logged in as <strong>". $web_username . "</strong>!
@@ -51,7 +51,7 @@
                 }
             }
         
-            // Perform basic authentication (replace with your own validation logic)
+            // Perform basic authentication
             if ($userFound == false) {
             // Authentication failed, display an error message
             echo "<div class='container'>

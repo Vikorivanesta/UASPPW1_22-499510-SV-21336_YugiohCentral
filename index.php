@@ -36,12 +36,12 @@
       <div class="container-md">
         <div class="col-md-8 mx-auto pt-3 text-center">
           <img src="Img/logo_white_3.png" width="300" height="auto" alt="Yugioh Central" class="d-none d-sm-block mx-auto mb-3">
-          <h2 class="mb-3 lh-1">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h2>
+          <h2 class="mb-3 lh-1">Main Resource Web for Yugioh: Master Duel</h2>
         </div>
       </div>
     </section>
 
-    <!-- main content -->
+    <!-- main section -->
     <div class="container">
         <section class="pb-md-5">
             <div class="row mb-2">
